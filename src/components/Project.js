@@ -1,8 +1,10 @@
 import React from 'react'
+import Aos from 'aos';
 
 import coding_img from '../asset/img/coding.jpg';
 
 export default function Project() {
+    Aos.init({duration: 3000});
     const gitHub = "https://github.com/Eilhwan";
     const projects = [
         {
@@ -26,11 +28,11 @@ export default function Project() {
         }
     ]
     return (
-        <div className="text-green-600">
+        <div className="text-green-600 p-10" data-aos="fade-up">
             <h2 className="text-white text-center text-3xl font-bold underline">PROJECT</h2>
             <div className="p-10">
-                {projects.map(obj => 
-                    <a href={obj.link} target="_blank" rel="noreferrer">
+                {projects.map((obj, index) => 
+                    <a href={obj.link} target="_blank" rel="noreferrer" key={index}>
                         <div className="p-5">
                             <img src={obj.img} alt="Project" className="w-96 pb-5"/>
                             <h3 className="pb-1 font-bold text-lg">{obj.name}</h3>

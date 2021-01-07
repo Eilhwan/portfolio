@@ -9,14 +9,15 @@ export default function About() {
     "문제를 획기적으로 풀어가는데 필요한 알고리즘을 공부하고 깔끔한 코드와 효율적인 모듈화를 추구합니다.\n",
     "팀원간의 협업을 중시하고 애자일 기법을 통한 즉각적으로 요구사항을 검토하고 반영하는 방식을 좋아합니다."]
     Aos.init()
+
     return (
-        <div className="text-white">
-        <h2 className="text-center text-3xl font-bold underline">ABOUT ME</h2>
-        <div className="p-10">
-            {aboutMe_text.map((text) => 
-                <p className="font-medium font-mono p-1">{text}</p>
-            )}
-        </div>
+        <div className="text-white p-10">
+            <h2 className="text-center text-3xl font-bold underline">ABOUT ME</h2>
+            <div className="p-10">
+                {aboutMe_text.map((text) => 
+                    <p className="font-medium font-mono p-1">{text}</p>
+                )}
+            </div>
     </div>
     )
 }

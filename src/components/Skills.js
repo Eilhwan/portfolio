@@ -29,7 +29,7 @@ import docker from '../asset/img/etc/docker.svg';
 
 
 export default function Skills() {
-    Aos.init();
+    Aos.init({duration: 3000});
 
     let skills = ["LANGUAGES", "DATABASES", "FRAMEWORKS", "OS", "ETC"];
     let skill_names = {
@@ -157,23 +157,24 @@ export default function Skills() {
     };
 
     return (
-        <div class="text-white" data-aos="fade-up">
-            <h2 class="text-center text-3xl font-bold underline">SKILLS</h2>
-            <div class="p-10">
+        <div className="text-white p-10" data-aos="fade-up">
+            <h2 className="text-center text-3xl font-bold underline">SKILLS</h2>
+            <div className="p-10">
                 {
                     skills.map((skill) => 
-                        <div class="p-5">
-                            <h2 class="text-xl font-bold">{skill}</h2>
-                            <div class="p-5 m-5 flex">
+                        <div className="p-5" key={skill}>
+                            <h2 className="text-xl font-bold">{skill}</h2>
+                            <div className="p-5 m-5 flex">
                             {skill_names[skill].map(object => 
-                                <div class="p-5 flex-1">
+                                <div className="p-5 flex-1" key={object.name}>
                                     <img 
                                         src={object.src} 
                                         alt={object.name} 
                                         name={object.name} 
-                                        class="rounded-2xl bg-white h-28 w-28 border-gray-500 hover:bg-gray-500 border-2 shadow-inner" 
+                                        className="rounded-2xl bg-white h-28 w-28 border-gray-500 hover:bg-gray-500 border-2 shadow-inner" 
                                         onMouseOver={onMouseOver} 
                                         onMouseOut={onMouseOut} />
+                                        
                                 </div>)}
                             </div>
                         </div>
