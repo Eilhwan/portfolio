@@ -21,7 +21,7 @@ export default function Footer() {
             <a href="https://iconscout.com/icons/mac" target="_blank">Mac Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia" target="_blank">Icon Mafia</a>
             <a href="https://iconscout.com/icons/git" target="_blank">Git Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia">Icon Mafia</a> on <a href="https://iconscout.com">Iconscout</a>
             <a href="https://iconscout.com/icons/redux" target="_blank">Redux Logo Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia" target="_blank">Icon Mafia</a>
-            
+            <a href="https://iconscout.com/icons/docker" target="_blank">Docker Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia" target="_blank">Icon Mafia</a>
         </div>
     )
 }

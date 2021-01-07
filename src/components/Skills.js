@@ -25,6 +25,7 @@ import linux from '../asset/img/os/linux.svg';
 
 import git from '../asset/img/etc/git.svg';
 import redux from '../asset/img/etc/redux.svg';
+import docker from '../asset/img/etc/docker.svg';
 
 
 export default function Skills() {
@@ -128,6 +129,11 @@ export default function Skills() {
             "src": redux,
             "level": "intermidiate"
     
+        }, {
+            "name": "Docker",
+            "src": docker,
+            "level": "intermidiate"
+            
         }]
     };
 
@@ -152,7 +158,7 @@ export default function Skills() {
 
     return (
         <div class="text-white" data-aos="fade-up">
-            <h2 class="text-center text-3xl font-bold underline">Skills</h2>
+            <h2 class="text-center text-3xl font-bold underline">SKILLS</h2>
             <div class="p-10">
                 {
                     skills.map((skill) => 
