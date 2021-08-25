@@ -14,7 +14,7 @@ function App() {
     Aos.init({duration: 2000});
   },[])  
   return (
-    <div className="md:container bg-black">
+    <div className="bg-black" style={{margin: "auto"}}>
       <Header />
       <About data-aos="fade-up"/>
       <Skills />

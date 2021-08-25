@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 export default function Header() {
 
@@ -18,7 +18,7 @@ export default function Header() {
 
     typingTxt=typingTxt.split("");
 
-    if(typingBool==false){
+    if(typingBool===false){
        typingBool=true;  
        var tyInt = setInterval(typing,500);
     }
