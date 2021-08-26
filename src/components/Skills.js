@@ -5,19 +5,15 @@ import Aos from 'aos';
 import java from '../asset/img/lang/java.svg';
 import cpp from '../asset/img/lang/cpp.svg';
 import python from '../asset/img/lang/python.svg';
-import r from '../asset/img/lang/r.svg';
 import javascript from '../asset/img/lang/javascript.svg';
 
-import oracle from '../asset/img/db/oracle.svg';
 import mysql from '../asset/img/db/mysql.svg';
-import mariadb from '../asset/img/db/mariadb.svg';
 import mongodb from '../asset/img/db/mongodb.svg';
 import firebase from '../asset/img/db/firebase.svg';
 
 import spring from '../asset/img/frameworks/spring.svg';
 import node from '../asset/img/frameworks/node-js.svg';
 import react from '../asset/img/frameworks/react.svg';
-import express from '../asset/img/frameworks/express.svg';
 
 import windows from '../asset/img/os/windows.svg';
 import mac from '../asset/img/os/mac.svg';
@@ -52,28 +48,13 @@ export default function Skills() {
             "src": cpp,
             "level": "basic"
     
-        }, {
-            "name": "R",
-            "src": r,
-            "level": "basic"
-    
         }],
         "DATABASES": [{
-            "name": "Oracle",
-            "src": oracle,
-            "level": "intermidiate"
-        }, {
-            "name": "MySql",
+            "name": "SQL",
             "src": mysql,
             "level": "intermidiate"
-    
-        }, {
-            "name": "MariaDB",
-            "src": mariadb,
-            "level": "intermidiate"
-    
-        }, {
-            "name": "MongoDB",
+        },{
+            "name": "NoSql",
             "src": mongodb,
             "level": "basic"
     
@@ -92,12 +73,7 @@ export default function Skills() {
             "src": node,
             "level": "intermidiate"
     
-        }, {
-            "name": "Express",
-            "src": express,
-            "level": "basic"
-    
-        }, {
+        },{
             "name": "React",
             "src": react,
             "level": "intermidiate"
