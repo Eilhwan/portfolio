@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.44bf9ab6.chunk.css",
-    "main.js": "/portfolio/static/js/main.0c1e5295.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.0c1e5295.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.95251bcd.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.95251bcd.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.8fed2963.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.8fed2963.js.map",
     "static/css/2.cb8ac254.chunk.css": "/portfolio/static/css/2.cb8ac254.chunk.css",
@@ -15,20 +15,16 @@
     "static/media/coding.9decca57.jpg": "/portfolio/static/media/coding.9decca57.jpg",
     "static/media/cpp.3028c13d.svg": "/portfolio/static/media/cpp.3028c13d.svg",
     "static/media/docker.fa898289.svg": "/portfolio/static/media/docker.fa898289.svg",
-    "static/media/express.6aa7d72b.svg": "/portfolio/static/media/express.6aa7d72b.svg",
     "static/media/firebase.60bed066.svg": "/portfolio/static/media/firebase.60bed066.svg",
     "static/media/git.cf89d743.svg": "/portfolio/static/media/git.cf89d743.svg",
     "static/media/java.b4a0adbd.svg": "/portfolio/static/media/java.b4a0adbd.svg",
     "static/media/javascript.0bc3ceeb.svg": "/portfolio/static/media/javascript.0bc3ceeb.svg",
     "static/media/linux.9c6e2118.svg": "/portfolio/static/media/linux.9c6e2118.svg",
     "static/media/mac.2175252c.svg": "/portfolio/static/media/mac.2175252c.svg",
-    "static/media/mariadb.cb5caa21.svg": "/portfolio/static/media/mariadb.cb5caa21.svg",
     "static/media/mongodb.5ded2e6c.svg": "/portfolio/static/media/mongodb.5ded2e6c.svg",
     "static/media/mysql.efdbddc3.svg": "/portfolio/static/media/mysql.efdbddc3.svg",
     "static/media/node-js.ca7d5097.svg": "/portfolio/static/media/node-js.ca7d5097.svg",
-    "static/media/oracle.438fbe17.svg": "/portfolio/static/media/oracle.438fbe17.svg",
     "static/media/python.58d5a0a7.svg": "/portfolio/static/media/python.58d5a0a7.svg",
-    "static/media/r.4c745e8b.svg": "/portfolio/static/media/r.4c745e8b.svg",
     "static/media/react.1520bd67.svg": "/portfolio/static/media/react.1520bd67.svg",
     "static/media/redux.5d8e6257.svg": "/portfolio/static/media/redux.5d8e6257.svg",
     "static/media/spring.13037d26.svg": "/portfolio/static/media/spring.13037d26.svg",
@@ -39,6 +35,6 @@
     "static/css/2.cb8ac254.chunk.css",
     "static/js/2.161ab9d0.chunk.js",
     "static/css/main.44bf9ab6.chunk.css",
-    "static/js/main.0c1e5295.chunk.js"
+    "static/js/main.95251bcd.chunk.js"
   ]
 }
