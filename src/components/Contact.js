@@ -11,7 +11,7 @@ export default function Contact() {
 
     return (
         <div className="text-white p-10" data-aos="fade-up">
-            <h2 className="text-center text-3xl font-bold underline">CONTECT</h2>
+            <h2 className="text-center text-3xl font-bold underline">CONTACT</h2>
             <div className="p-10">
                 {info.map(value=>
                     <div className="p-5">
