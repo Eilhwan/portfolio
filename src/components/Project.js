@@ -26,13 +26,15 @@ export default function Project() {
             "관리자와 일반 사용자의 기능을 분리하였습니다."],
             link: gitHub + "/JRstudyCafe"
         }, {
-            name: "KT 온라인 셀프결합",
+            name: "KT 온라인 셀프결합, 사장님성공팩, 신혼미리결합",
             img: coding_img,
             date: "2021.02.01 ~ 2021.05.31",
             tools: ["Java", "Spring", "PostgreSql", "WSDL"],
             desc: ["KT 마이페이지 온라인 셀프결합 기능 개발",
             "코로나로 비대면 서비스의 증가로 앱을 통한 비대면 결합을 제공하기 위한 서비스를 제공",
-            "온라인 셀프 결합 서비스를 통하여 고객 스스로 결합 할인을 받을 수 있게 하기 위함"],
+            "온라인 셀프 결합 서비스를 통하여 고객 스스로 결합 할인을 받을 수 있게 하기 위함",
+            "인터넷이 없는 신혼부부를 위한 모바일 프리미엄 가족할인",
+            ],
             link: "https://product.kt.com/wDic/productDetail.do?ItemCode=1133&CateCode=6027&filter_code=44&option_code=71&pageSize=5"
         }
     ]
