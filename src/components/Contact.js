@@ -6,7 +6,7 @@ export default function Contact() {
     const info = [
         ["Email","eilhwan@gmail.com"],
         ["GitHub", "https://github.com/Eilhwan"],
-        ["PhoneCall", "+821083153109"]
+        ["PhoneCall", "+82)10-8315-3109"]
     ]
 
     return (

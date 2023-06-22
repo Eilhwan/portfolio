@@ -5,38 +5,59 @@ import coding_img from '../asset/img/coding.jpg';
 
 export default function Project() {
     Aos.init({duration: 3000});
-    const gitHub = "https://github.com/Eilhwan";
+    const gitHubURL = "https://github.com/Eilhwan";
     const projects = [
         {
-            name: "TeaHome",
+            name: "KT 온라인 셀프결합",
             img: coding_img,
-            date: "2020.03.10 ~ 2020.03.20",
-            tools: ["Java", "Jsp", "Javascript", "Ajax", "OracleDB", "Bootstrap"],
-            desc: [ "Java와 Jsp를 활용해 MVC model2 패턴을 사용하여 음용차를 판매하는 사이트를 만들었습니다.", 
-                    "기능은 크게 4가지로 관리자의 물품등록/관리, 회원관리, 물품구매, 리뷰시스템으로 구성되어있습니다.",
-                    "관리자와 사용자의 기능을 분리하여 제작하였습니다."],
-            link: gitHub + "/stlproject"
-        }, {
-            name: "JRStudyCafe",
-            img: coding_img,
-            date: "2020.04.08 ~ 2020.05.04",
-            tools: ["Java", "Spring", "Jsp", "Javascript", "Ajax", "OracleDB", "Bootstrap"],
-            desc: ["본 프로젝트는 더조은컴퓨터아카데미에서 네 명의 팀원으로 구성되어 3주간 진행한 팀프로젝트의 결과물 입니다.",
-            "스터디룸 예약을 목적으로 제작되었으며 그 외, 커뮤니티, 쪽지, 게시판 등의 기능을 포함합니다.",
-            "관리자와 일반 사용자의 기능을 분리하였습니다."],
-            link: gitHub + "/JRstudyCafe"
-        }, {
-            name: "KT 온라인 셀프결합, 사장님성공팩, 신혼미리결합",
-            img: coding_img,
-            date: "2021.02.01 ~ 2021.05.31",
-            tools: ["Java", "Spring", "PostgreSql", "WSDL"],
-            desc: ["KT 마이페이지 온라인 셀프결합 기능 개발",
-            "코로나로 비대면 서비스의 증가로 앱을 통한 비대면 결합을 제공하기 위한 서비스를 제공",
-            "온라인 셀프 결합 서비스를 통하여 고객 스스로 결합 할인을 받을 수 있게 하기 위함",
-            "인터넷이 없는 신혼부부를 위한 모바일 프리미엄 가족할인",
+            date: "2021.02 ~ 2021.05",
+            tools: ["Java", "Spring", "PostgreSql", "REST"],
+            desc: [
+                "KT 마이페이지 비대면 온라인 셀프결합 개발",
+                "코로나로 비대면 서비스의 증가로 앱을 통한 비대면 결합을 제공하기 위한 서비스를 제공",
+                "KT 통합 전산 API를 활용해서 고객이 받을 수 있는 최대 할인을 제공하는 결합 서비스 제공",
+                "인터넷이 없는 신혼부부를 위한 모바일 프리미엄 가족할인",
             ],
             link: "https://product.kt.com/wDic/productDetail.do?ItemCode=1133&CateCode=6027&filter_code=44&option_code=71&pageSize=5"
-        }
+        },{
+            name: "신혼미리결합 결합 상품 개발",
+            img: coding_img,
+            date: "2021.08 ~ 2021.09",
+            tools: ["Java", "Nexacro", "Oracle", "SOA"],
+            desc: [
+                "가족증명을 할 수 없는 신혼부부를 위한 모바일 결합 상품 개발",
+                "기존 유무선 총액결합의 할인금액과 같은 할인을 제공하는 결합상품 개발",
+                "유무선과 동일한 정책이나 상품의 구성이 달라 할인 알고리즘 신규 개발",
+                "인터넷이 없는 신혼부부를 위한 모바일 프리미엄 가족할인",
+            ],
+            link: "https://product.kt.com/wDic/productDetail.do?ItemCode=1441"
+        },{
+            name: "사장님성공팩 구조화 프로젝트",
+            img: coding_img,
+            date: "2022.01. ~ 2022.04",
+            tools: ["Java", "Nexacro", "Oracle", "SOA"],
+            desc: [
+                
+            ],
+            link: "https://product.kt.com/wDic/productDetail.do?ItemCode=1133&CateCode=6027&filter_code=44&option_code=71&pageSize=5"
+        },{
+            name: "사은품 발송 프로세스 개선",
+            img: coding_img,
+            date: "2022.05 ~ 2022.06",
+            tools: ["Java", "Nexacro", "Oracle", "SOA"],
+            desc: [
+                
+            ],
+            link: "https://product.kt.com/wDic/productDetail.do?ItemCode=1133&CateCode=6027&filter_code=44&option_code=71&pageSize=5"
+        },{
+            name: "기타 결합 프로젝트 및 SM 유지보수",
+            img: coding_img,
+            date: "2022.07 ~ ",
+            tools: ["Java", "Nexacro", "Oracle", "SOA"],
+            desc: [
+            ],
+            link: "https://product.kt.com/wDic/productDetail.do?ItemCode=1133&CateCode=6027&filter_code=44&option_code=71&pageSize=5"
+        },
     ]
     return (
         <div className="text-green-600 p-10" data-aos="fade-up">
@@ -49,7 +70,7 @@ export default function Project() {
                             <h3 className="pb-1 font-bold text-lg">{obj.name}</h3>
                             <h3 className="pb-1">개발 기간: {obj.date}</h3>
                             <h3 className="pb-1">
-                                {obj.tools.map((t, i) =>
+                                기술스택: {obj.tools.map((t, i) =>
                                     i !== obj.tools.length - 1 ? t + ", " : t
                                     )}
                             </h3>
