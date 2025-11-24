@@ -1,5 +1,5 @@
 import React from 'react';
-import Aos from 'aos';
+
 
 // Imgs
 import java from '../asset/img/lang/java.svg';
@@ -25,139 +25,72 @@ import docker from '../asset/img/etc/docker.svg';
 
 
 export default function Skills() {
-    Aos.init({duration: 3000});
-
     let skills = ["LANGUAGES", "DATABASES", "FRAMEWORKS", "OS", "ETC"];
     let skill_names = {
-        "LANGUAGES": [{
-            "name": "java",
-            "src": java,
-            "level": "intermidiate"
-        }, {
-            "name": "python",
-            "src": python,
-            "level": "intermidiate"
-    
-        }, {
-            "name": "javascript",
-            "src": javascript,
-            "level": "intermidiate"
-    
-        }, {
-            "name": "c++",
-            "src": cpp,
-            "level": "basic"
-    
-        }],
-        "DATABASES": [{
-            "name": "SQL",
-            "src": mysql,
-            "level": "intermidiate"
-        },{
-            "name": "NoSql",
-            "src": mongodb,
-            "level": "basic"
-    
-        }, {
-            "name": "Firebase",
-            "src": firebase,
-            "level": "basic"
-    
-        }],
-        "FRAMEWORKS": [{
-            "name": "Spring",
-            "src": spring,
-            "level": "intermidiate"
-        }, {
-            "name": "NodeJs",
-            "src": node,
-            "level": "intermidiate"
-    
-        },{
-            "name": "React",
-            "src": react,
-            "level": "intermidiate"
-    
-        }],
-        "OS": [{
-            "name": "mac",
-            "src": mac,
-            "level": "intermidiate"
-    
-        }, {
-            "name": "Windows",
-            "src": windows,
-            "level": "expert"
-    
-        }, {
-            "name": "Linux",
-            "src": linux,
-            "level": "intermidiate"
-    
-        }],
-        "ETC": [{
-            "name": "Git",
-            "src": git,
-            "level": "expert"
-    
-        }, {
-            "name": "Redux",
-            "src": redux,
-            "level": "intermidiate"
-    
-        }, {
-            "name": "Docker",
-            "src": docker,
-            "level": "intermidiate"
-            
-        }]
-    };
-
-    const onMouseOver = (event) => {
-        const { target } = event;
-        const text = document.createElement("h5");
-        const parent_text = target.parentNode.parentNode.parentNode.firstChild.innerText;
-        let for_find;
-        skill_names[parent_text].forEach(element => {
-            if (element.name === target.name){
-                for_find = `${element.name} / ${element.level}`;
-            }
-        });       
-        text.innerHTML = for_find;
-        target.parentNode.appendChild(text);
-    };
-
-    const onMouseOut = (event) => {
-        const { target } = event;
-        target.parentNode.removeChild(target.parentNode.lastChild);
+        "LANGUAGES": [
+            { name: "Java", src: java, level: "Intermediate" },
+            { name: "Python", src: python, level: "Intermediate" },
+            { name: "JavaScript", src: javascript, level: "Intermediate" },
+            { name: "C++", src: cpp, level: "Basic" }
+        ],
+        "DATABASES": [
+            { name: "SQL", src: mysql, level: "Intermediate" },
+            { name: "NoSQL", src: mongodb, level: "Basic" },
+            { name: "Firebase", src: firebase, level: "Basic" }
+        ],
+        "FRAMEWORKS": [
+            { name: "Spring", src: spring, level: "Intermediate" },
+            { name: "Node.js", src: node, level: "Intermediate" },
+            { name: "React", src: react, level: "Intermediate" }
+        ],
+        "OS": [
+            { name: "macOS", src: mac, level: "Intermediate" },
+            { name: "Windows", src: windows, level: "Expert" },
+            { name: "Linux", src: linux, level: "Intermediate" }
+        ],
+        "ETC": [
+            { name: "Git", src: git, level: "Expert" },
+            { name: "Redux", src: redux, level: "Intermediate" },
+            { name: "Docker", src: docker, level: "Intermediate" }
+        ]
     };
 
     return (
-        <div className="text-white p-10" data-aos="fade-up">
-            <h2 className="text-center text-3xl font-bold underline">SKILLS</h2>
-            <div className="p-10">
-                {
-                    skills.map((skill) => 
-                        <div className="p-5" key={skill}>
-                            <h2 className="text-xl font-bold">{skill}</h2>
-                            <div className="p-5 m-5 flex">
-                            {skill_names[skill].map(object => 
-                                <div className="p-5 flex-1" key={object.name}>
-                                    <img 
-                                        src={object.src} 
-                                        alt={object.name} 
-                                        name={object.name} 
-                                        className="rounded-2xl bg-white h-28 w-28 border-gray-500 hover:bg-gray-500 border-2 shadow-inner" 
-                                        onMouseOver={onMouseOver} 
-                                        onMouseOut={onMouseOut} />
-                                        
-                                </div>)}
+        <section id="skills" className="py-20 bg-slate-800/50">
+            <div className="container mx-auto px-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-100 mb-16">
+                    Technical <span className="text-emerald-400">Skills</span>
+                </h2>
+
+                <div className="space-y-16">
+                    {skills.map((category) => (
+                        <div key={category} className="max-w-6xl mx-auto">
+                            <h3 className="text-xl font-semibold text-slate-300 mb-8 border-b border-slate-700 pb-2 inline-block">
+                                {category}
+                            </h3>
+                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                                {skill_names[category].map((skill) => (
+                                    <div key={skill.name} className="group relative bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300 border border-slate-700 hover:border-emerald-500/50 hover:shadow-lg hover:shadow-emerald-500/10 flex flex-col items-center justify-center gap-4">
+                                        <div className="w-16 h-16 flex items-center justify-center transition-transform group-hover:scale-110 duration-300">
+                                            <img
+                                                src={skill.src}
+                                                alt={skill.name}
+                                                className="max-w-full max-h-full"
+                                            />
+                                        </div>
+                                        <div className="text-center">
+                                            <h4 className="font-medium text-slate-200 group-hover:text-emerald-400 transition-colors">{skill.name}</h4>
+                                            <span className="text-xs text-slate-500 mt-1 block px-2 py-1 rounded-full bg-slate-900/50 border border-slate-700">
+                                                {skill.level}
+                                            </span>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
-                    )
-                }
+                    ))}
+                </div>
             </div>
-        </div>
-
+        </section>
     )
 }

@@ -10,16 +10,18 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 
 function App() {
-  useEffect(()=>{
-    Aos.init({duration: 2000});
-  },[])  
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, [])
   return (
-    <div className="bg-black" style={{margin: "auto"}}>
+    <div className="min-h-screen">
       <Header />
-      <About data-aos="fade-up"/>
-      <Skills />
-      <Project data-aos="fade-up"/>
-      <Contact data-aos="fade-up"/>
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <About data-aos="fade-up" />
+        <Skills />
+        <Project data-aos="fade-up" />
+        <Contact data-aos="fade-up" />
+      </main>
     </div>
   );
 }
