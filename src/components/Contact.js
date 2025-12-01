@@ -6,7 +6,7 @@ export default function Contact() {
     const info = [
         { icon: "E", label: "Email", value: "eilhwan@gmail.com", link: "mailto:eilhwan@gmail.com" },
         { icon: "G", label: "GitHub", value: "github.com/Eilhwan", link: "https://github.com/Eilhwan" },
-        { icon: "P", label: "Phone", value: "010-9511-1003", link: "tel:010-9511-1003" },
+        { icon: "P", label: "Phone", value: "010-8315-3109", link: "tel:010-8315-3109" },
     ];
 
     return (
