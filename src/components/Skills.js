@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 
 // Imgs
 import java from '../asset/img/lang/java.svg';
@@ -56,7 +56,13 @@ export default function Skills() {
     };
 
     return (
-        <section id="skills" className="py-20 bg-slate-800/50">
+        <motion.section
+            id="skills"
+            className="py-20 bg-slate-800/50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+        >
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-100 mb-16">
                     Technical <span className="text-emerald-400">Skills</span>
@@ -91,6 +97,6 @@ export default function Skills() {
                     ))}
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }

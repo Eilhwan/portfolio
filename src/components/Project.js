@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { AnimatePresence, motion } from 'framer-motion';
 
 import coding_img from '../asset/img/coding.jpg';
 import ProjectModal from './ProjectModal';
@@ -7,6 +7,7 @@ import ProjectModal from './ProjectModal';
 // 객체 파라미터 방식으로 함수 선언
 export default function Project() {
     const [selectedProject, setSelectedProject] = useState(null);
+    const [filter, setFilter] = useState('All');
 
     const projects = [
         {
@@ -112,16 +113,47 @@ export default function Project() {
         }
     ];
 
+    const allTools = ['All', ...new Set(projects.flatMap(p => p.tools))];
+    const filteredProjects = filter === 'All'
+        ? projects
+        : projects.filter(p => p.tools.includes(filter));
+
     return (
-        <section id="projects" className="py-20">
+        <motion.section
+            id="projects"
+            className="py-20"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+        >
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-100 mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-100 mb-8">
                     Featured <span className="text-emerald-400">Projects</span>
                 </h2>
+
+                <div className="flex flex-wrap justify-center gap-3 mb-12">
+                    {allTools.map((tool) => (
+                        <button
+                            key={tool}
+                            onClick={() => setFilter(tool)}
+                            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${filter === tool
+                                    ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/25 scale-105'
+                                    : 'bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white'
+                                }`}
+                        >
+                            {tool}
+                        </button>
+                    ))}
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((obj, index) =>
-                        <div
-                            key={index}
+                    {filteredProjects.map((obj, index) =>
+                        <motion.div
+                            layout
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.3 }}
+                            key={obj.name} // Use unique key for animation
                             onClick={() => setSelectedProject(obj)}
                             className="group block h-full cursor-pointer"
                         >
@@ -144,14 +176,18 @@ export default function Project() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     )}
                 </div>
             </div>
-            <ProjectModal
-                project={selectedProject}
-                onClose={() => setSelectedProject(null)}
-            />
-        </section>
+            <AnimatePresence>
+                {selectedProject && (
+                    <ProjectModal
+                        project={selectedProject}
+                        onClose={() => setSelectedProject(null)}
+                    />
+                )}
+            </AnimatePresence>
+        </motion.section>
     )
 }
